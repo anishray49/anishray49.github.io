@@ -7,4 +7,4 @@ redirect_from:
   - /about.html
 ---
 
-I am a Ph.D. student in the Department of Mathematics at the University of Houston since August 2025. Before this, I completed the B.Sc. (Hons.) in Mathematics and Computing programme at the Institute of Mathematics and Applications, Bhubaneswar, affiliated with the Utkal University. Then I joined the Faculty of Mathematics and Computer Science at the University of Münster in Germany in October 2020, where I completed the M.Sc. Mathematics programme in June 2023. I am interested in Analytic Number Theory, L-functions, Automorphic Forms, and Equidistribution problems in Number Theory and Homogeneous Dynamics.
+I am a Ph.D. student in the Department of Mathematics at the University of Houston since August 2025. I completed my B.Sc. (Honours) in Mathematics and Computing from the Institute of Mathematics and Applications, Bhubaneswar (Utkal University). I completed my M.Sc. in Mathematics from the University of Münster in 2023, and the Master 2 *Mathématiques et Applications – Analysis, Number Theory and Geometry (M2 AAG)* from Université Paris-Saclay in 2024.
