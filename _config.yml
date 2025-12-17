@@ -25,7 +25,7 @@ author:
   avatar           : "profile.png"
   name             : "Anish Ray"
   employer         : "University of Houston"
-  uri              : "https://math.uh.edu/~aray8"
+  uri              : #"https://math.uh.edu/~aray8"
   email            : "anishray49@gmail.com" 
 
   # Academic websites
