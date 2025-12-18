@@ -1,11 +1,16 @@
 {% include base_path %}
 
 <footer class="page__footer">
+
+  <div class="page__footer-copyright">
+    &copy; {{ site.time | date: '%Y' }} {{ site.name | default: site.title }}
+  </div>
+
   {%- comment -%}
-  Minimal footer override.
-  Removes: Sitemap / Follow (GitHub, RSS) / Powered by (Jekyll & AcademicPages) / Site last updated.
-  Keeps custom footer scripts (MathJax/Plotly/Mermaid) via _includes/footer/custom.html.
+  Load custom footer scripts (MathJax / Plotly / Mermaid).
+  Sitemap, Follow links, Powered-by text intentionally removed.
   {%- endcomment -%}
 
   {%- include footer/custom.html -%}
+
 </footer>
