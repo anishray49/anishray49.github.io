@@ -53,7 +53,7 @@ publication_category:
     title: 'Conference Papers'
   preprints:
     title: 'Article'
-  Thesis:
+  thesis:
     title: 'Thesis title'
 
 # Site Settings
