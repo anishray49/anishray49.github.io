@@ -20,6 +20,6 @@ main:
   - title: "CV"
     url: 'https://drive.google.com/file/d/1tlBe502SFk9MIDv-WrWIAtvVtJK-17Wi/view?usp=sharing'
     
-  # - title: "CV"
-  #   url: /cv-json/
+  - title: "CV"
+  url: /cv-json/
     
