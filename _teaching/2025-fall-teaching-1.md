@@ -1,8 +1,8 @@
 ---
-title: "TA-Fall 2025"
+title: Fall 2025
 collection: teaching
-type: "MATH 2305-Discrete Mathematics"
-permalink: /teaching/2025-fall-teaching-1
-venue: "University of Houston"
-date: 2025-01-01
+university: University of Houston
+courses:
+  - MATH 2305 - Discrete Mathematics
+date: 2025-08-01
 ---
