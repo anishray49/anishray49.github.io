@@ -12,7 +12,7 @@ main:
     url: /publications/
 
   - title: "Notes"
-    url: /talks/    
+    url: /notes/    
 
   - title: "Teaching"
     url: /teaching/    
