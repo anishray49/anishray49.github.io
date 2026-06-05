@@ -7,12 +7,26 @@ author_profile: true
 
 {% include base_path %}
 
-{% for post in site.teaching reversed %}
-  <h2>{{ post.title }}</h2>
+{% assign grouped_teaching = site.teaching | group_by: "university" %}
 
-  <p>
-    {{ post.type }},
-    <em>{{ post.venue }}</em>,
-    {{ post.date | date: "%Y" }}
-  </p>
+{% for university in grouped_teaching %}
+  <h2>{{ university.name }}</h2>
+
+  {% assign entries = university.items | sort: "date" | reverse %}
+
+  {% for post in entries %}
+    <h3>{{ post.title }}</h3>
+
+    {% if post.courses %}
+      <ul>
+        {% for course in post.courses %}
+          <li>{{ course }}</li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+
+    {% if post.office_hours %}
+      <p><strong>Office hours:</strong> {{ post.office_hours }}</p>
+    {% endif %}
+  {% endfor %}
 {% endfor %}
