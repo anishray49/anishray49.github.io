@@ -28,10 +28,13 @@ author_profile: true
         <h2>{{ category[1].title }}</h2>
         <hr />
         {% assign title_shown = true %}
+        {% assign number = 0 %}
       {% endunless %}
 
+      {% assign number = number | plus: 1 %}
+
       <div>
-        <h3>{{ post.title }}</h3>
+        <h3>{{ number }}. {{ post.title }}</h3>
 
         {% if post.paperurl %}
           <p>
@@ -47,9 +50,13 @@ author_profile: true
 
 {% else %}
 
+  {% assign number = 0 %}
+
   {% for post in site.publications reversed %}
+    {% assign number = number | plus: 1 %}
+
     <div>
-      <h3>{{ post.title }}</h3>
+      <h3>{{ number }}. {{ post.title }}</h3>
 
       {% if post.paperurl %}
         <p>
