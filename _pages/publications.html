@@ -3,8 +3,24 @@ layout: archive
 title: "Publications"
 permalink: /publications/
 author_profile: true
-mathjax: true
 ---
+
+<script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']]
+    },
+    svg: {
+      fontCache: 'global'
+    }
+  };
+</script>
+
+<script
+  async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+</script>
 
 {% if site.author.googlescholar %}
   <div class="wordwrap">
@@ -36,7 +52,7 @@ mathjax: true
 
       <div>
         <h3>
-          {{ number }}. {{ post.title | markdownify | remove: '<p>' | remove: '</p>' }}
+          {{ number }}. {{ post.title }}
         </h3>
 
         {% if post.paperurl %}
@@ -60,7 +76,7 @@ mathjax: true
 
     <div>
       <h3>
-        {{ number }}. {{ post.title | markdownify | remove: '<p>' | remove: '</p>' }}
+        {{ number }}. {{ post.title }}
       </h3>
 
       {% if post.paperurl %}
