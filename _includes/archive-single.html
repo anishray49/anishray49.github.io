@@ -60,17 +60,19 @@
 
       {%- assign cat = post.category | default: "" | downcase | strip -%}
       {%- assign v = post.venue | default: "" | strip -%}
-      {%- assign status = post.status | default: "" | strip -%}
 
       {%- comment -%}
-      Display a status line when one is provided.
-      This is useful for entries such as "Work in progress. Announced October 2026."
+      For works in progress, show the body content of the publication entry.
+      This lets the entry contain a short note such as:
+      "Work in progress. Announced October 2026."
       {%- endcomment -%}
 
-      {% if status != "" %}
-        <p class="page__meta" style="margin-top: -0.4em;">
-          <em>{{ status }}</em>
-        </p>
+      {% if cat == "workinprogress" %}
+        {% if post.content and post.content != "" %}
+          <div class="archive__item-excerpt" itemprop="description">
+            {{ post.content }}
+          </div>
+        {% endif %}
       {% endif %}
 
       {%- comment -%}
@@ -101,22 +103,32 @@
 
     {% endif %}
 
-    {% if post.excerpt and site.read_more != 'enabled' %}
+    {%- comment -%}
+    For ordinary entries, preserve the existing excerpt behavior.
+    Do not repeat the excerpt logic for work-in-progress entries,
+    since their body content is already displayed above.
+    {%- endcomment -%}
 
-      <div class="archive__item-excerpt" itemprop="description">
-        {{ post.excerpt | markdownify }}
-      </div>
+    {% unless post.collection == 'publications' and post.category == 'workinprogress' %}
 
-    {% elsif post.excerpt and site.read_more == 'enabled' %}
+      {% if post.excerpt and site.read_more != 'enabled' %}
 
-      <div class="archive__item-excerpt" itemprop="description">
-        {{ post.excerpt | markdownify | remove: '<p>' | remove: '</p>' }}
-        <strong>
-          <a href="{{ base_path }}{{ post.url }}" rel="permalink">Read more</a>
-        </strong>
-      </div>
+        <div class="archive__item-excerpt" itemprop="description">
+          {{ post.excerpt | markdownify }}
+        </div>
 
-    {% endif %}
+      {% elsif post.excerpt and site.read_more == 'enabled' %}
+
+        <div class="archive__item-excerpt" itemprop="description">
+          {{ post.excerpt | markdownify | remove: '<p>' | remove: '</p>' }}
+          <strong>
+            <a href="{{ base_path }}{{ post.url }}" rel="permalink">Read more</a>
+          </strong>
+        </div>
+
+      {% endif %}
+
+    {% endunless %}
 
     {% if post.citation and post.paperurl and post.slidesurl and post.bibtexurl %}
 
