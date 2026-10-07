@@ -62,12 +62,12 @@
       {%- assign v = post.venue | default: "" | strip -%}
 
       {%- comment -%}
-      For works in progress, show the body content of the publication entry.
+      For works in preparation, show the body content of the publication entry.
       This lets the entry contain a short note such as:
-      "Work in progress. Announced October 2026."
+      "In preparation. Announced October 2026."
       {%- endcomment -%}
 
-      {% if cat == "workinprogress" %}
+      {% if cat == "inpreparation" %}
         {% if post.content and post.content != "" %}
           <div class="archive__item-excerpt" itemprop="description">
             {{ post.content }}
@@ -80,7 +80,7 @@
       preprints, theses, or works in progress, and only when venue is non-empty.
       {%- endcomment -%}
 
-      {% unless cat == "preprints" or cat == "thesis" or cat == "workinprogress" %}
+      {% unless cat == "preprints" or cat == "thesis" or cat == "inpreparation" %}
         {% if v != "" %}
           <p>
             Published in <i>{{ v }}</i>,
@@ -105,11 +105,11 @@
 
     {%- comment -%}
     For ordinary entries, preserve the existing excerpt behavior.
-    Do not repeat the excerpt logic for work-in-progress entries,
+    Do not repeat the excerpt logic for in-preparation entries,
     since their body content is already displayed above.
     {%- endcomment -%}
 
-    {% unless post.collection == 'publications' and post.category == 'workinprogress' %}
+    {% unless post.collection == 'publications' and post.category == 'inpreparation' %}
 
       {% if post.excerpt and site.read_more != 'enabled' %}
 
