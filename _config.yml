@@ -52,8 +52,8 @@ publication_category:
     title: 'Journal Articles'    
   conferences:
     title: 'Conference Papers'
-  workinprogress:
-    title: 'Work in Progress'
+  inpreparation:
+    title: 'In Preparation'
   preprints:
     title: 'Preprints'
   thesis:
