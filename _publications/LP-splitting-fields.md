@@ -1,7 +1,7 @@
 ---
 title: "Lattice Point Counting and Generic Splitting Fields"
 collection: publications
-category: workinprogress
+category: inpreparation
 date: 2026-10-06
-status: "Work in progress. Announced October 2026."
+status: "In preparation. Announced October 2026."
 ---
