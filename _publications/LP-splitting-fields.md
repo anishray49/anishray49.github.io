@@ -1,5 +1,5 @@
 ---
-title: "Lattice point counting and generic splitting fields"
+title: "Lattice Point Counting and Generic Splitting Fields"
 collection: publications
 category: workinprogress
 date: 2026-10-06
