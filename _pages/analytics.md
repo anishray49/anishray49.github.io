@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "Website Analytics"
+title: "Web Analytics"
 permalink: /analytics/
 author_profile: false
 ---
