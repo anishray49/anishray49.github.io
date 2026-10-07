@@ -1,5 +1,5 @@
 ---
-title: "Gaussian Upper Tails for Products of Dirichlet \(L\)-Functions"
+title: "Gaussian Upper Tails for Products of Dirichlet $L$-Functions"
 collection: publications
 category: workinprogress
 date: 2026-10-06
