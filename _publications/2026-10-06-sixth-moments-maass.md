@@ -1,7 +1,7 @@
 ---
 title: "Sixth Moments of Maass Cusp-Form $L$-functions in the t-aspect"
 collection: publications
-category: workinprogress
+category: inpreparation
 date: 2026-10-06
-status: "Work in progress. Announced October 2026."
+status: "In preparation. Announced October 2026."
 ---
