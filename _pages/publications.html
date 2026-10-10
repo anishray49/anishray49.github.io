@@ -57,6 +57,10 @@ author_profile: true
           {{ number }}. {{ post.title }}
         </h3>
 
+        {% if post.supervisor and post.supervisor_url %}
+          <p class="publication-supervisor">Supervisor: <a href="{{ post.supervisor_url | escape }}" target="_blank" rel="noopener noreferrer">{{ post.supervisor | escape }}</a></p>
+        {% endif %}
+
         {% if post.status %}
           <p style="margin-top: -0.5em;">
             <span style="font-style: italic;">{{ post.status }}</span>
