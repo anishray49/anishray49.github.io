@@ -33,6 +33,3 @@ redirect_from:
   </div>
 </section>
 
-<section class="home-outro" aria-label="Contact and research">
-  <p>Interested in these topics? <a href="mailto:aray9@uh.edu">Get in touch</a>, or <a href="/publications/">browse my research page</a>.</p>
-</section>

@@ -7,26 +7,37 @@ author_profile: true
 
 {% include base_path %}
 
-{% assign grouped_teaching = site.teaching | group_by: "university" %}
+<div class="teaching-hub">
+  <p class="teaching-hub__intro">Courses I have supported as a teaching assistant, organized by academic term.</p>
 
-{% for university in grouped_teaching %}
-  <h2>{{ university.name }}</h2>
+  {% assign grouped_teaching = site.teaching | group_by: "university" %}
+  {% for university in grouped_teaching %}
+    <section class="teaching-hub__institution" aria-label="{{ university.name | escape }}">
+      <h2 class="teaching-hub__university">{{ university.name | escape }}</h2>
 
-  {% assign entries = university.items | sort: "date" | reverse %}
-
-  {% for post in entries %}
-    <h3>{{ post.title }}</h3>
-
-    {% if post.courses %}
-      <ul>
-        {% for course in post.courses %}
-          <li>{{ course }}</li>
+      {% assign entries = university.items | sort: "date" | reverse %}
+      <div class="teaching-hub__timeline">
+        {% for post in entries %}
+          <article class="teaching-entry">
+            <header class="teaching-entry__head">
+              <h3>{{ post.title | escape }}</h3>
+              {% if post.courses %}
+                <span class="teaching-entry__count">{{ post.courses.size }} {% if post.courses.size == 1 %}course{% else %}courses{% endif %}</span>
+              {% endif %}
+            </header>
+            {% if post.courses %}
+              <ul class="teaching-entry__courses">
+                {% for course in post.courses %}
+                  <li>{{ course | escape }}</li>
+                {% endfor %}
+              </ul>
+            {% endif %}
+            {% if post.office_hours %}
+              <p class="teaching-entry__hours"><strong>Office hours:</strong> {{ post.office_hours | escape }}</p>
+            {% endif %}
+          </article>
         {% endfor %}
-      </ul>
-    {% endif %}
-
-    {% if post.office_hours %}
-      <p><strong>Office hours:</strong> {{ post.office_hours }}</p>
-    {% endif %}
+      </div>
+    </section>
   {% endfor %}
-{% endfor %}
+</div>

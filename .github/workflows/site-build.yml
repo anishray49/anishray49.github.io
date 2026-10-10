@@ -34,6 +34,15 @@ jobs:
           test -s _site/publications/index.html
           test -s _site/cv-json/index.html
           test -s _site/notes/index.html
+          test -s _site/teaching/index.html
+          grep -q 'class="teaching-hub"' _site/teaching/index.html
+          test "$(grep -o 'class="teaching-entry"' _site/teaching/index.html | wc -l | tr -d ' ')" -eq 3
+          grep -q 'MATH 2415' _site/teaching/index.html
+          grep -q 'MATH 2305' _site/teaching/index.html
+          grep -q 'MATH 2451' _site/teaching/index.html
+          grep -q 'PGH 676' _site/index.html
+          grep -q 'class="author__office"' _site/index.html
+          grep -q 'teaching-hub__timeline' _site/assets/css/main.css
           grep -q 'notes-hub' _site/notes/index.html
           if grep -q 'notes-hub__kicker' _site/notes/index.html; then echo 'Unwanted Writing/Seminars labels remain'; exit 1; fi
           grep -q '>Unpublished articles</h2>' _site/notes/index.html
@@ -49,6 +58,7 @@ jobs:
           grep -q 'lang-trotter-hardy-littlewood-cm.pdf' _site/notes/index.html
           if grep -q 'class="home-hero"' _site/index.html; then echo 'Unexpected green hero banner'; exit 1; fi
           grep -q 'home-intro' _site/index.html
+          if grep -q 'home-outro' _site/index.html; then echo 'Removed homepage invitation still appears'; exit 1; fi
           if grep -Eqi '0[1-3] / (About|Research interests|ANALYSIS|AUTOMORPHIC FORMS|DYNAMICS)' _site/index.html; then echo 'Numbered homepage section labels remain'; exit 1; fi
           grep -q '>About</span>' _site/index.html
           grep -q '>Research interests</span>' _site/index.html
