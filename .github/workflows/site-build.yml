@@ -33,6 +33,10 @@ jobs:
           test -s _site/assets/css/main.css
           test -s _site/publications/index.html
           test -s _site/cv-json/index.html
+          test -s _site/notes/index.html
+          grep -q 'notes-hub' _site/notes/index.html
+          grep -q 'weighted-large-sieve.pdf' _site/notes/index.html
+          grep -q 'lang-trotter-hardy-littlewood-cm.pdf' _site/notes/index.html
           if grep -q 'class="home-hero"' _site/index.html; then echo 'Unexpected green hero banner'; exit 1; fi
           grep -q 'home-intro' _site/index.html
           grep -q 'home-research-grid' _site/assets/css/main.css
