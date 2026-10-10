@@ -8,7 +8,7 @@ author_profile: true
 {% include base_path %}
 
 <div class="teaching-hub">
-  <p class="teaching-hub__intro">Courses I have supported as a teaching assistant, organized by academic term.</p>
+  <p class="teaching-hub__intro">Courses I have supported as a teaching assistant and a grader, organized by academic term.</p>
 
   {% assign grouped_teaching = site.teaching | group_by: "university" %}
   {% for university in grouped_teaching %}
@@ -31,11 +31,14 @@ author_profile: true
                   {% assign parts = course | split: " - " %}
                   <li class="teaching-entry__course">
                     {% if parts.size > 1 %}
-                      {% assign code = parts[0] | remove_first: "TA for " %}
+                      {% assign code = parts[0] | remove_first: "TA for " | remove_first: "Grader for " %}
                       <span class="teaching-entry__code">{{ code | escape }}</span>
                       <span class="teaching-entry__course-name">{{ parts[1] | escape }}</span>
                       {% if course contains "TA for " %}
                         <span class="teaching-entry__role">Teaching assistant</span>
+                      {% endif %}
+                      {% if course contains "Grader for " %}
+                        <span class="teaching-entry__role">Grader</span>
                       {% endif %}
                     {% else %}
                       <span class="teaching-entry__course-name">{{ course | escape }}</span>
