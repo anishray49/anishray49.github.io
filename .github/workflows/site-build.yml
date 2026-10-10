@@ -1,0 +1,38 @@
+name: Verify Jekyll website
+
+on:
+  pull_request:
+    branches:
+      - master
+  push:
+    branches:
+      - design/editorial-refresh-2026
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    name: Build and smoke-test website
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v4
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.1'
+          bundler-cache: true
+      - name: Build Jekyll
+        run: bundle exec jekyll build --trace
+      - name: Validate generated pages and styles
+        shell: bash
+        run: |
+          test -s _site/index.html
+          test -s _site/assets/css/main.css
+          test -s _site/publications/index.html
+          test -s _site/cv-json/index.html
+          grep -q 'home-hero' _site/index.html
+          grep -q 'home-research-grid' _site/assets/css/main.css
+          grep -q 'publication-entry' _site/assets/css/main.css

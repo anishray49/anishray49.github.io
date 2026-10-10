@@ -22,7 +22,7 @@ redirect_from:
 
 <script>
 document.addEventListener("DOMContentLoaded", function () {
-  const repo = "{{ site.github.repository_nwo }}";
+  const repo = "{{ site.repository }}";
   const cvPath = "files/CV.pdf";
   const updatedElement = document.getElementById("cv-last-updated");
 
