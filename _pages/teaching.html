@@ -16,7 +16,7 @@ author_profile: true
       <h2 class="teaching-hub__university">{{ university.name | escape }}</h2>
 
       {% assign entries = university.items | sort: "date" | reverse %}
-      <div class="teaching-hub__timeline">
+      <div class="teaching-hub__cards">
         {% for post in entries %}
           <article class="teaching-entry">
             <header class="teaching-entry__head">
@@ -28,7 +28,19 @@ author_profile: true
             {% if post.courses %}
               <ul class="teaching-entry__courses">
                 {% for course in post.courses %}
-                  <li>{{ course | escape }}</li>
+                  {% assign parts = course | split: " - " %}
+                  <li class="teaching-entry__course">
+                    {% if parts.size > 1 %}
+                      {% assign code = parts[0] | remove_first: "TA for " %}
+                      <span class="teaching-entry__code">{{ code | escape }}</span>
+                      <span class="teaching-entry__course-name">{{ parts[1] | escape }}</span>
+                      {% if course contains "TA for " %}
+                        <span class="teaching-entry__role">Teaching assistant</span>
+                      {% endif %}
+                    {% else %}
+                      <span class="teaching-entry__course-name">{{ course | escape }}</span>
+                    {% endif %}
+                  </li>
                 {% endfor %}
               </ul>
             {% endif %}
