@@ -27,7 +27,7 @@ redirect_from:
       <p>Spectral theory of automorphic forms and automorphic representations.</p>
     </div>
     <div class="home-research-card">
-      <h3>Arithmetic statistics</h3>
+      <h3>Arithmetic statistics and Homogeneous dynamics</h3>
       <p>Equidistribution problems and homogeneous dynamics.</p>
     </div>
   </div>
