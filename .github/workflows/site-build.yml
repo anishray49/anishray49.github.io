@@ -35,6 +35,9 @@ jobs:
           test -s _site/cv-json/index.html
           test -s _site/notes/index.html
           grep -q 'notes-hub' _site/notes/index.html
+          if grep -q 'notes-hub__kicker' _site/notes/index.html; then echo 'Unwanted Writing/Seminars labels remain'; exit 1; fi
+          grep -q '>Unpublished articles</h2>' _site/notes/index.html
+          grep -q 'Talks &amp; lecture notes</h2>' _site/notes/index.html
           grep -q 'notes-hub__article-number' _site/notes/index.html
           if grep -q 'class="notes-hub__tag"' _site/notes/index.html; then echo 'Old research-project labels remain'; exit 1; fi
           grep -q 'notes-hub__list' _site/assets/css/main.css
