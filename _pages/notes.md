@@ -22,14 +22,12 @@ author_profile: true
     </header>
     <div class="notes-hub__featured">
       <article class="notes-hub__paper">
-        <span class="notes-hub__tag">Research project <span aria-hidden="true">·</span> 01</span>
-        <h3>A Weighted Large Sieve Inequality</h3>
+        <h3><span class="notes-hub__article-number">1.</span> A Weighted Large Sieve Inequality</h3>
         <p>A research project under the supervision of <a href="https://www.mathematik.uni-rostock.de/en/unser-institut/professuren-apl-prof/algebra/">Prof. Jan-Christoph Schlage-Puchta</a> and proved a variant of the classical large sieve inequality by introducing suitable weight functions.</p>
         <a class="notes-hub__pdf" href="/files/weighted-large-sieve.pdf">Read PDF <span aria-hidden="true">↗</span></a>
       </article>
       <article class="notes-hub__paper">
-        <span class="notes-hub__tag">Research project <span aria-hidden="true">·</span> 02</span>
-        <h3>An estimate for the number of solutions of forms in prime variables</h3>
+        <h3><span class="notes-hub__article-number">2.</span> An estimate for the number of solutions of forms in prime variables</h3>
         <p>In 2021, J. Liu and L. Zhao proved the existence of solutions of a system of \(R\) forms with at least \(4^{d+2}d^2R^5\) prime variables. Using the Hardy-Littlewood Circle method, they found an estimate for the number of such solutions, which confirms the existence of prime solutions of a system of forms satisfying some local conditions. In this article, we obtain an unweighted estimate for \(R=1\) using a minimalist approach derived by K. Biggs and J. Brandes. Supervisor: <a href="https://www.math.chalmers.se/~brjulia/">Prof. Julia Brandes.</a></p>
         <a class="notes-hub__pdf" href="/files/forms-in-primes.pdf">Read PDF <span aria-hidden="true">↗</span></a>
       </article>
