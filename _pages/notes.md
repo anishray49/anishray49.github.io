@@ -11,7 +11,6 @@ author_profile: true
   <section id="research-projects" class="notes-hub__section" aria-labelledby="notes-research-title">
     <header class="notes-hub__section-head">
       <div>
-        <span class="notes-hub__kicker">01 / Writing</span>
         <h2 id="notes-research-title">Unpublished articles</h2>
       </div>
       <span class="notes-hub__count">2 papers</span>
@@ -33,7 +32,6 @@ author_profile: true
   <section id="seminar-notes" class="notes-hub__section" aria-labelledby="notes-seminar-title">
     <header class="notes-hub__section-head">
       <div>
-        <span class="notes-hub__kicker">02 / Seminars</span>
         <h2 id="notes-seminar-title">Talks &amp; lecture notes</h2>
       </div>
       <span class="notes-hub__count">7 PDFs</span>
