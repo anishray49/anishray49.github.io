@@ -38,6 +38,10 @@ jobs:
           grep -q 'notes-hub__article-number' _site/notes/index.html
           if grep -q 'class="notes-hub__tag"' _site/notes/index.html; then echo 'Old research-project labels remain'; exit 1; fi
           grep -q 'notes-hub__list' _site/assets/css/main.css
+          grep -q 'flex-direction:column' _site/assets/css/main.css
+          test "$(grep -o 'class="notes-hub__note"' _site/notes/index.html | wc -l | tr -d ' ')" -eq 7
+          if grep -q 'notes-hub__jump' _site/notes/index.html; then echo 'Removed Notes shortcuts still appear'; exit 1; fi
+          grep -q 'Arithmetic statistics and Homogeneous dynamics' _site/index.html
           grep -q 'weighted-large-sieve.pdf' _site/notes/index.html
           grep -q 'lang-trotter-hardy-littlewood-cm.pdf' _site/notes/index.html
           if grep -q 'class="home-hero"' _site/index.html; then echo 'Unexpected green hero banner'; exit 1; fi
