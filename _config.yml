@@ -12,10 +12,10 @@ site_theme               : "default"
 title                    : "Anish Ray"
 title_separator          : "-"
 name                     : &name "Anish Ray"
-description              : &description "personal description"
+description              : &description "PhD student in mathematics at the University of Houston, working in analytic number theory and automorphic forms."
 url                      : "https://anishray49.github.io/"
 baseurl                  : ""
-repository               : "academicpages/academicpages.github.io"
+repository               : "anishray49/anishray49.github.io"
 
 # Site Author - The following control what appear as part of the author content on the side bar.
 #               If a field is blank the icon and link will not appear, otherwise it will be shown.
