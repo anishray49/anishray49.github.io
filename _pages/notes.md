@@ -7,10 +7,6 @@ author_profile: true
 
 <div class="notes-hub">
   <p class="notes-hub__intro">Unpublished research projects and a collection of notes from talks and seminars at the University of Münster and the University of Houston.</p>
-  <nav class="notes-hub__jump" aria-label="On this page">
-    <a href="#research-projects">Research projects <span aria-label="2 documents">02</span></a>
-    <a href="#seminar-notes">Seminar notes <span aria-label="7 documents">07</span></a>
-  </nav>
 
   <section id="research-projects" class="notes-hub__section" aria-labelledby="notes-research-title">
     <header class="notes-hub__section-head">
