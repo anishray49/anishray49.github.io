@@ -57,7 +57,7 @@ author_profile: true
         <span class="notes-hub__number">06</span><span class="notes-hub__note-title">Haar Measure and the Fourier Transform on Locally Compact Abelian Groups</span><span class="notes-hub__arrow" aria-hidden="true">↗</span>
       </a>
       <a class="notes-hub__note" href="/files/lang-trotter-hardy-littlewood-cm.pdf">
-        <span class="notes-hub__number">07</span><span class="notes-hub__note-title">A Computational Comparison of Lang--Trotter and Hardy--Littlewood Constants for CM Elliptic Curves</span><span class="notes-hub__arrow" aria-hidden="true">↗</span>
+        <span class="notes-hub__number">07</span><span class="notes-hub__note-title">A Computational Comparison of Lang-Trotter and Hardy-Littlewood Constants for CM Elliptic Curves</span><span class="notes-hub__arrow" aria-hidden="true">↗</span>
       </a>
     </div>
   </section>
