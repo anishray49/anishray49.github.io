@@ -7,17 +7,6 @@ redirect_from:
   - /about.html
 ---
 
-<div class="home-hero" aria-labelledby="home-name">
-  <div class="home-hero__eyebrow">MATHEMATICS <span aria-hidden="true">/</span> UNIVERSITY OF HOUSTON</div>
-  <h1 id="home-name">Anish Ray<span class="home-hero__period">.</span></h1>
-  <p class="home-hero__lead">Exploring arithmetic through analytic number theory, automorphic forms, and spectral theory.</p>
-  <div class="home-hero__actions">
-    <a class="home-hero__action home-hero__action--primary" href="/publications/">Explore research <span aria-hidden="true">↗</span></a>
-    <a class="home-hero__action" href="/cv-json/">Curriculum vitae <span aria-hidden="true">↗</span></a>
-  </div>
-  <span class="home-hero__ornament" aria-hidden="true">ζ(s)</span>
-</div>
-
 <section class="home-intro" aria-labelledby="home-about-heading">
   <span class="home-section-label">01 / About</span>
   <h2 id="home-about-heading">A little about me</h2>
