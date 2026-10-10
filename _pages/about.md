@@ -16,7 +16,7 @@ redirect_from:
 
 <section aria-labelledby="home-research-heading">
   <span class="home-section-label">02 / Research interests</span>
-  <h2 id="home-research-heading" class="home-research-title">Analysis, arithmetic, and dynamics</h2>
+  <h2 id="home-research-heading" class="home-research-title">Analytic Number Theory, Automorphic Forms, Arithmetic Statistics and Homogeneous Dynamics</h2>
   <div class="home-research-grid">
     <div class="home-research-card">
       <span>01 / ANALYSIS</span>
@@ -24,7 +24,7 @@ redirect_from:
       <p>L-functions and questions about the distribution of arithmetic objects.</p>
     </div>
     <div class="home-research-card">
-      <span>02 / SPECTRAL</span>
+      <span>02 / AUTOMORPHIC FORMS</span>
       <h3>Automorphic forms</h3>
       <p>Spectral theory of automorphic forms and automorphic representations.</p>
     </div>
