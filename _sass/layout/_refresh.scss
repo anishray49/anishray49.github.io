@@ -354,7 +354,7 @@ a { text-underline-offset: .18em; }
   border-top: 1px solid var(--global-border-color);
   font-size: .91rem;
 }
-.sidebar .author__office {
+.sidebar .author__location {
   display: block;
   margin: .22rem 0 .6rem;
   color: var(--global-text-color-light);
@@ -362,7 +362,6 @@ a { text-underline-offset: .18em; }
   line-height: 1.45;
   overflow-wrap: anywhere;
 }
-.sidebar .author__office i { color: var(--site-accent); margin-right: .28rem; }
 @media (max-width: 540px) {
   .teaching-hub__timeline { padding-left: 1.3rem; }
   .teaching-entry { padding: 1rem; }
