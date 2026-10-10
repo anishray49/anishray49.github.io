@@ -42,5 +42,8 @@ jobs:
           grep -q 'lang-trotter-hardy-littlewood-cm.pdf' _site/notes/index.html
           if grep -q 'class="home-hero"' _site/index.html; then echo 'Unexpected green hero banner'; exit 1; fi
           grep -q 'home-intro' _site/index.html
+          if grep -Eqi '0[1-3] / (About|Research interests|ANALYSIS|AUTOMORPHIC FORMS|DYNAMICS)' _site/index.html; then echo 'Numbered homepage section labels remain'; exit 1; fi
+          grep -q '>About</span>' _site/index.html
+          grep -q '>Research interests</span>' _site/index.html
           grep -q 'home-research-grid' _site/assets/css/main.css
           grep -q 'publication-entry' _site/assets/css/main.css
