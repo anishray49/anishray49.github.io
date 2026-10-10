@@ -40,10 +40,15 @@ jobs:
           grep -q 'MATH 2415' _site/teaching/index.html
           grep -q 'MATH 2305' _site/teaching/index.html
           grep -q 'MATH 2451' _site/teaching/index.html
-          grep -q '>PGH-676</p>' _site/index.html
+          grep -q 'class="author__location".*fa-location-dot.*PGH 676' _site/index.html
           grep -q 'class="author__location"' _site/index.html
           if grep -q 'Office: PGH' _site/index.html; then echo 'Office prefix still present'; exit 1; fi
-          grep -q 'teaching-hub__timeline' _site/assets/css/main.css
+          grep -q 'teaching-hub__cards' _site/teaching/index.html
+          grep -q 'teaching-entry__course-name' _site/teaching/index.html
+          grep -q 'teaching-entry__code' _site/teaching/index.html
+          grep -q 'teaching-hub__cards' _site/assets/css/main.css
+          grep -q 'home-intro--card' _site/index.html
+          grep -q 'home-intro--card' _site/assets/css/main.css
           grep -q 'notes-hub' _site/notes/index.html
           if grep -q 'notes-hub__kicker' _site/notes/index.html; then echo 'Unwanted Writing/Seminars labels remain'; exit 1; fi
           grep -q '>Unpublished articles</h2>' _site/notes/index.html
